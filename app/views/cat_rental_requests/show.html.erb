@@ -1,0 +1,10 @@
+<% rented_cat = @cat_rental_request.cat %>
+
+<h1>Pending Requests for <%= rented_cat.name %></h1>
+
+<% rented_cat.rental_requests.each do |request| %>
+  <%= "Start Date: #{request.start_date}" %>
+  <%= "End Date: #{request.end_date}" %>
+  <br>
+
+<% end  %>
